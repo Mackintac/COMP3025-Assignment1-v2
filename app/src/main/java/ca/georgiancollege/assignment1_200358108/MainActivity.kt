@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         setContentView(binding.root)
-        viewModel = MovieViewModel(binding)
+        viewModel = MovieViewModel()
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         Log.i("tag", "before click")
         binding.searchButton.setOnClickListener(View.OnClickListener {
             Log.i("tag", "pre-function")
-                viewModel.fetchSearchResults()
+                viewModel.fetchSearchResults(binding.searchEditText.text.toString())
             Log.i("tag", "post-function")
         })
 

@@ -14,23 +14,23 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 
-class MovieViewModel(private var binding: ActivityMainBinding) : ViewModel() {
+class MovieViewModel() : ViewModel() {
 
 
     private var movieData: MutableLiveData<MovieModel> = MutableLiveData()
 
     private var searchResultData: MutableLiveData<List<MovieModel>> = MutableLiveData()
 
-    public fun getMovieData(): MutableLiveData<MovieModel> {
+    fun getMovieData(): MutableLiveData<MovieModel> {
         return movieData
     }
     fun getSearchedMoviesData(): MutableLiveData<List<MovieModel>> {
         return searchResultData
     }
-    fun fetchSearchResults() {
+    fun fetchSearchResults(userString: String) {
         var apiString: String = "http://www.omdbapi.com/?s="
         var apiKey: String = "&apikey=6ad0eb6"
-        var userString: String = binding.searchEditText.text.toString()
+
 
         val searchString: String = apiString + userString + apiKey
 
@@ -71,14 +71,14 @@ class MovieViewModel(private var binding: ActivityMainBinding) : ViewModel() {
                 }
             })
     }
-    fun search(){
+    fun search(title:String ){
         Log.i("tag", "Click")
 
         var apiString: String = "http://www.omdbapi.com/?t="
         var apiKey: String = "&apikey=6ad0eb6"
-        var userString: String = binding.searchEditText.text.toString()
 
-        val searchString: String = apiString + userString + apiKey
+
+        val searchString: String = apiString + title     + apiKey
 
         var apiClient: ApiClient = ApiClient()
         apiClient.get(
