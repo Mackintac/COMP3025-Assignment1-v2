@@ -51,9 +51,6 @@ class MainActivity : AppCompatActivity() {
             myAdapter.updateItems(movieList)
         }
 
-        viewModel.getMovieData().observe(this) { movieModel ->
-            binding.searchEditText.setText(movieModel.title)
-        }
         var layoutManager = LinearLayoutManager(this)
         binding.recyclerView.setLayoutManager(layoutManager)
         Log.i("tag", "after click")
