@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">assignment1_200358108</string>
+    <string name="details_title">Title:</string>
+    <string name="details_director">Director:</string>
+    <string name="details_rating">Rating:</string>
+    <string name="details_year">Year:</string>
+
+
 </resources>

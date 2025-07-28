@@ -21,64 +21,110 @@
 
     <TextView
         android:id="@+id/detailsTitleTextView"
-        android:layout_width="256dp"
-        android:layout_height="50dp"
-        android:text="TextView"
-        android:textAlignment="center"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.756"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailsImageView"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/detailsDirectorTextView"
         android:layout_width="88dp"
         android:layout_height="37dp"
         android:layout_marginTop="2dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailsTitleTextView"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/detailsRatingTextView"
         android:layout_width="95dp"
         android:layout_height="31dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailsDirectorTextView"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.034" />
+
+    <TextView
+        android:id="@+id/detailsRatingLabelTextView"
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+        android:textAlignment="textEnd"
+        android:text="@string/details_rating"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/detailsRatingTextView"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
         android:id="@+id/detailsYearTextView"
         android:layout_width="87dp"
         android:layout_height="32dp"
         android:layout_marginTop="11dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsDirectorTextView"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
 
     <TextView
         android:id="@+id/detailsPlotTextView"
         android:layout_width="326dp"
         android:layout_height="288dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.875" />
+
+    <TextView
+        android:id="@+id/detailsTitleLabelTextView"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:text="@string/details_title"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/detailsTitleTextView"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <TextView
+        android:id="@+id/detailsDirectorLabelTextView"
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+        android:textAlignment="textEnd"
+        android:text="@string/details_director"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/detailsDirectorTextView"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/detailsYearLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:text="@string/details_year"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/detailsYearTextView"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
 </androidx.constraintlayout.widget.ConstraintLayout>

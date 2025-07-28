@@ -28,6 +28,15 @@ class MovieDetailsActivity : AppCompatActivity() {
         val title = intent.getStringExtra("title")
         if(title != null){
             viewModel.search(title)
+
+            viewModel.getMovieData().observe(this) { movieModel ->
+                binding.detailsImageView.setImageURI(movieModel.poster)
+                binding.detailsTitleTextView.setText(movieModel.title)
+                binding.detailsDirectorTextView.setText(movieModel.director)
+                binding.detailsRatingTextView.setText(movieModel.rating)
+                binding.detailsYearTextView.setText(movieModel.year)
+                binding.detailsPlotTextView.setText(movieModel.plot)
+            }
         }
 
     }
