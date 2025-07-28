@@ -22,7 +22,8 @@
     <TextView
         android:id="@+id/detailsTitleTextView"
         android:layout_width="210dp"
-        android:layout_height="48dp"
+        android:layout_height="32dp"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.756"
@@ -35,6 +36,7 @@
         android:layout_width="88dp"
         android:layout_height="37dp"
         android:layout_marginTop="2dp"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
@@ -46,6 +48,7 @@
         android:id="@+id/detailsRatingTextView"
         android:layout_width="95dp"
         android:layout_height="31dp"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -71,12 +74,13 @@
         android:layout_width="87dp"
         android:layout_height="32dp"
         android:layout_marginTop="11dp"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.52" />
 
     <TextView
         android:id="@+id/detailsPlotTextView"
