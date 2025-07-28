@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.setLayoutManager(layoutManager)
         Log.i("tag", "after click")
 
-        myAdapter = MyAdapter( movieList, applicationContext)
+        myAdapter = MyAdapter( movieList, this)
         binding.recyclerView.adapter = myAdapter
 
 

@@ -1,6 +1,7 @@
 package ca.georgiancollege.assignment1_200358108
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,12 @@ class MyAdapter(private var movies: List<MovieModel>, private var context: Conte
         holder.plot.setText(movie.year)
         holder.imageView.setImageURI(movie.poster)
         holder.imdbId.setText(movie.imdbId)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, MovieDetailsActivity::class.java)
+            intent.putExtra("title", movie.title)
+            context.startActivity(intent)
+        }
     }
     fun updateItems(newMovies: List<MovieModel>){
         this.movies = newMovies
