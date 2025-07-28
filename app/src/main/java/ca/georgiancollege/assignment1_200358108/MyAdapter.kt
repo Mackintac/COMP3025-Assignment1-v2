@@ -27,6 +27,7 @@ class MyAdapter(private var movies: List<MovieModel>, private var context: Conte
         holder.title.setText(movie.title)
         holder.plot.setText(movie.year)
         holder.imageView.setImageURI(movie.poster)
+        holder.imdbId.setText(movie.imdbId)
     }
     fun updateItems(newMovies: List<MovieModel>){
         this.movies = newMovies

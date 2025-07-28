@@ -11,10 +11,13 @@ public class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     lateinit var imageView: ImageView
     lateinit var title: TextView
     lateinit var plot: TextView
+    lateinit var imdbId: TextView
 
     init {
         imageView = itemView.findViewById(R.id.posterImageView)
         title = itemView.findViewById(R.id.titleTextView)
         plot = itemView.findViewById(R.id.plotTextView)
+        imdbId = itemView.findViewById(R.id.imdbIdTextView)
+
     }
 }

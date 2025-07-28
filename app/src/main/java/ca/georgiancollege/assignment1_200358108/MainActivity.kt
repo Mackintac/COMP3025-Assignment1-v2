@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.getSearchedMoviesData().observe(this) { movies ->
             movieList = movies
-            myAdapter.
+            myAdapter.updateItems(movieList)
         }
 
         viewModel.getMovieData().observe(this) { movieModel ->

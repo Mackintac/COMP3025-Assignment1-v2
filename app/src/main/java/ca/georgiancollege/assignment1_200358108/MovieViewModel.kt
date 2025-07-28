@@ -24,8 +24,9 @@ class MovieViewModel(private var binding: ActivityMainBinding) : ViewModel() {
     public fun getMovieData(): MutableLiveData<MovieModel> {
         return movieData
     }
-    fun getSearchedMoviesData(): MutableLiveData<List<MovieModel>>  = searchResultData
-
+    fun getSearchedMoviesData(): MutableLiveData<List<MovieModel>> {
+        return searchResultData
+    }
     fun fetchSearchResults() {
         var apiString: String = "http://www.omdbapi.com/?s="
         var apiKey: String = "&apikey=6ad0eb6"
