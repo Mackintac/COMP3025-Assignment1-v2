@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         setContentView(binding.root)
-        viewModel = MovieViewModel()
+        viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getMovieData().observe(this) { movieModel ->
             binding.searchEditText.setText(movieModel.title)
         }
-        var layoutManager: LinearLayoutManager = LinearLayoutManager(this)
+        var layoutManager = LinearLayoutManager(this)
         binding.recyclerView.setLayoutManager(layoutManager)
         Log.i("tag", "after click")
 
